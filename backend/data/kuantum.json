@@ -1,0 +1,318 @@
+{
+    "theme": "dark",
+    "project_name": "Quantum Lab: From Planck to Chips",
+    "archetype": "Modern Cybernetic Pixel-Art / Quantum Terminal",
+    "description": "A refined, playful-yet-mature retro-futuristic pixel-inspired UI crafted for university physics & electrical engineering students. It blends precise high-tech gridlines, subtle glowing CRT/circuit pixel motifs, crisp monospace and geometric typography with rich dark obsidian, quantum cyan, semiconductor neon amber, and deep violet surfaces.",
+    "colors": {
+        "surfaces": [
+            {
+                "name": "page",
+                "kind": "solid",
+                "bg": "#0B0F17",
+                "on_bg": "#E2E8F0",
+                "on_bg_muted": "#94A3B8",
+                "roles": {
+                    "border": "#1E293B",
+                    "link": "#38BDF8",
+                    "accent_glow": "#00F5D4",
+                    "grid_line": "#131C2E"
+                }
+            },
+            {
+                "name": "panel",
+                "kind": "solid",
+                "bg": "#111827",
+                "on_bg": "#F8FAFC",
+                "on_bg_muted": "#94A3B8",
+                "roles": {
+                    "border": "#22324D",
+                    "highlight": "#00F5D4",
+                    "chip_circuit": "#38BDF8"
+                }
+            },
+            {
+                "name": "card_chapter",
+                "kind": "solid",
+                "bg": "#151F32",
+                "on_bg": "#F1F5F9",
+                "on_bg_muted": "#94A3B8",
+                "roles": {
+                    "locked_bg": "#0D131F",
+                    "locked_border": "#1E293B",
+                    "unlocked_border": "#00F5D4",
+                    "active_border": "#FBBF24"
+                }
+            },
+            {
+                "name": "hud_bar",
+                "kind": "solid",
+                "bg": "#0E1524",
+                "on_bg": "#F8FAFC",
+                "on_bg_muted": "#64748B",
+                "roles": {
+                    "xp_bar_fill": "#00F5D4",
+                    "badge_glow": "#F59E0B"
+                }
+            },
+            {
+                "name": "hero",
+                "kind": "solid",
+                "bg": "#070A10",
+                "on_bg": "#FFFFFF",
+                "on_bg_muted": "#94A3B8",
+                "roles": {
+                    "link": "#00F5D4",
+                    "error": "#F87171",
+                    "success": "#34D399"
+                }
+            },
+            {
+                "name": "canvas_simulation",
+                "kind": "solid",
+                "bg": "#050811",
+                "on_bg": "#E2E8F0",
+                "on_bg_muted": "#64748B",
+                "roles": {
+                    "grid": "#111C2E",
+                    "laser": "#F43F5E",
+                    "wave": "#38BDF8"
+                }
+            }
+        ],
+        "accent": "#00F5D4",
+        "on_accent": "#051614",
+        "secondary_accent": "#F59E0B",
+        "on_secondary_accent": "#1C1102",
+        "energy_violet": "#A855F7",
+        "quantum_cyan": "#00F5D4",
+        "semiconductor_amber": "#F59E0B",
+        "danger": "#EF4444",
+        "success": "#10B981"
+    },
+    "typography": {
+        "font_family_heading": "Space Grotesk, sans-serif",
+        "font_family_body": "JetBrains Mono, monospace",
+        "font_family_pixel_accent": "'Press Start 2P', monospace",
+        "font_imports": [
+            "@fontsource-variable/space-grotesk",
+            "@fontsource-variable/jetbrains-mono",
+            "@fontsource/press-start-2p"
+        ],
+        "scale_px": {
+            "display": 48,
+            "h1": 36,
+            "h2": 28,
+            "h3": 20,
+            "body": 15,
+            "caption": 13,
+            "pixel_badge": 10
+        },
+        "rules": {
+            "pixel_font_usage": "Use 'Press Start 2P' sparingly ONLY for small badges, XP counts, LEVEL tags, chapter numbers, and retro-button labels (font size 10px-12px, tracking-widest). Never use for body paragraphs or long descriptions to maintain academic readability.",
+            "headings": "Space Grotesk with font-bold / font-black and tracking-tight for titles, modal headers, and chapter names.",
+            "body": "JetBrains Mono with leading-relaxed (15px desktop, 14px mobile) for lesson copy, explanations, equations, and code/formulas."
+        }
+    },
+    "entry_surfaces": {
+        "/": "Retro-cybernetic title screen: Pixel logo badge + Glowing particle grid background + Start Adventure / Continue CTA stack + Language & Sound quick-toggles",
+        "/map": "Interactive 13-node circuit path map: Header HUD (XP, Badge, Lang Toggle) + Scrollable vertical/horizontal node trajectory with status badges (Locked, In-Progress, Completed)",
+        "/chapter/:id": "Quantum workspace split: Top Navigation & HUD + Left Lesson/Formula panel with KaTeX + Right Interactive Simulation canvas area + 'Ask Why' Drawer & 'Next' Action bar",
+        "/quiz/:id": "Tactical assessment console: 5-question multi-choice stepper with terminal-style timer, feedback score matrix, and XP reward animations",
+        "/journal": "Lab Notebook grid: Categorized discovery cards (Planck constant, Wave-Particle, Bandgap, MOSFET, FinFET) with pixel stamp icons and unlocked formulas",
+        "/settings": "Clean engineering control panel: Language toggle (ID / EN), Sound FX toggle, Progress Reset modal, and Dark Mode theme lock"
+    },
+    "visual_enhancers": {
+        "pixel_borders": "2px solid border with subtle step corners (box-shadow: 2px 2px 0px #00F5D4 or 3px 3px 0px #1E293B for neo-pixel depth)",
+        "scanline_effect": "Optional subtle background scanline overlay (linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%)) with 4px grid",
+        "circuit_lines": "Subtle SVG quantum orbit / circuit trace overlays in header and map path",
+        "glow_effects": "drop-shadow-[0_0_8px_rgba(0,245,212,0.4)] on active buttons, chapter nodes, and XP badges"
+    },
+    "bilingual_dictionary_structure": {
+        "default_language": "id",
+        "supported_languages": [
+            "id",
+            "en"
+        ],
+        "persistence_key": "quantum_lab_lang",
+        "namespaces": [
+            "common",
+            "home",
+            "map",
+            "chapter",
+            "quiz",
+            "journal",
+            "settings",
+            "chapters_data"
+        ]
+    },
+    "chapters_blueprint": [
+        {
+            "id": 1,
+            "code": "CH-01",
+            "era": "quantum_birth",
+            "title_id": "Radiasi Benda Hitam & Bencana Ultraviolet",
+            "title_en": "Blackbody Radiation & Ultraviolet Catastrophe",
+            "concept": "E = nhf, Planck Hypothesis"
+        },
+        {
+            "id": 2,
+            "code": "CH-02",
+            "era": "quantum_birth",
+            "title_id": "Efek Fotolistrik & Foton Einstein",
+            "title_en": "Photoelectric Effect & Einstein's Photon",
+            "concept": "KE_max = hf - \u03a6"
+        },
+        {
+            "id": 3,
+            "code": "CH-03",
+            "era": "wave_matter",
+            "title_id": "Model Atom Bohr & Kuantisasi Orbit",
+            "title_en": "Bohr Atom Model & Quantized Orbits",
+            "concept": "L = n\u210f, Rydberg Energy"
+        },
+        {
+            "id": 4,
+            "code": "CH-04",
+            "era": "wave_matter",
+            "title_id": "Dualisme Gelombang-Partikel de Broglie",
+            "title_en": "de Broglie Wave-Particle Duality",
+            "concept": "\u03bb = h / p"
+        },
+        {
+            "id": 5,
+            "code": "CH-05",
+            "era": "wave_mechanics",
+            "title_id": "Persamaan Schr\u00f6dinger & Fungsi Gelombang",
+            "title_en": "Schr\u00f6dinger Equation & Wavefunction",
+            "concept": "i\u210f \u2202\u03c8/\u2202t = H\u03c8, |\u03c8|\u00b2 Probability"
+        },
+        {
+            "id": 6,
+            "code": "CH-06",
+            "era": "wave_mechanics",
+            "title_id": "Prinsip Ketidakpastian Heisenberg",
+            "title_en": "Heisenberg Uncertainty Principle",
+            "concept": "\u0394x \u00b7 \u0394p \u2265 \u210f/2"
+        },
+        {
+            "id": 7,
+            "code": "CH-07",
+            "era": "wave_mechanics",
+            "title_id": "Partikel dalam Kotak Potensial (Quantum Well)",
+            "title_en": "Particle in a Box (Quantum Well)",
+            "concept": "E_n = (n\u00b2\u03c0\u00b2\u210f\u00b2)/(2mL\u00b2)"
+        },
+        {
+            "id": 8,
+            "code": "CH-08",
+            "era": "quantum_tunneling",
+            "title_id": "Quantum Tunneling & Kebocoran Gerbang",
+            "title_en": "Quantum Tunneling & Gate Leakage",
+            "concept": "T \u2248 e^(-2\u03baL), Sub-nanometer barrier"
+        },
+        {
+            "id": 9,
+            "code": "CH-09",
+            "era": "solid_state",
+            "title_id": "Struktur Pita Energi & Celah Pita (Bandgap)",
+            "title_en": "Energy Band Structure & Bandgap",
+            "concept": "Valence vs Conduction Band, E_g"
+        },
+        {
+            "id": 10,
+            "code": "CH-10",
+            "era": "semiconductors",
+            "title_id": "Semikonduktor Intrinsik & Doping (Tipe-P / Tipe-N)",
+            "title_en": "Intrinsic & Doped Semiconductors (P-Type / N-Type)",
+            "concept": "Donors, Acceptors, Fermi Level"
+        },
+        {
+            "id": 11,
+            "code": "CH-11",
+            "era": "semiconductors",
+            "title_id": "Sambungan P-N & Dioda Rekayasa",
+            "title_en": "P-N Junction & Diode Rectification",
+            "concept": "Depletion Region, Built-in Potential"
+        },
+        {
+            "id": 12,
+            "code": "CH-12",
+            "era": "chip_design",
+            "title_id": "Transistor MOSFET: Katup Elektronik Modern",
+            "title_en": "MOSFET Transistor: The Modern Electronic Valve",
+            "concept": "V_GS, Inversion Layer, Drain Current"
+        },
+        {
+            "id": 13,
+            "code": "CH-13",
+            "era": "chip_design",
+            "title_id": "FinFET, Gate-All-Around (GAA) & Batas Kuantum Chip 2nm",
+            "title_en": "FinFET, GAA & The 2nm Chip Quantum Boundary",
+            "concept": "3D Channel, Short-Channel Effect Control"
+        }
+    ],
+    "layouts_and_components": {
+        "hud_header": {
+            "path": "frontend/src/components/game/GameHUD.tsx",
+            "elements": [
+                "Brand Pixel Logo (QuantumLab)",
+                "Chapter progress chip (e.g. CH 03/13)",
+                "XP Counter with animated spark (+50 XP)",
+                "Badge Showcase pill",
+                "Instant Language Switcher (ID / EN)",
+                "Settings icon button"
+            ]
+        },
+        "map_view": {
+            "path": "frontend/src/components/game/AdventureMap.tsx",
+            "elements": [
+                "13 progressive nodes connected by glowing pixel circuit trace",
+                "4 Era Segment Headers (Quantum Birth, Wave Mechanics, Solid-State Physics, Nanometer Chip Design)",
+                "Node cards displaying chapter title, concept badge, KaTeX preview snippet, locked/unlocked state, and completion star rating"
+            ]
+        },
+        "chapter_workspace": {
+            "path": "frontend/src/components/game/ChapterWorkspace.tsx",
+            "elements": [
+                "Left/Top: Lesson Content Panel with rich KaTeX math render, intuitive concept breakdown, and 'Key Takeaway' box",
+                "Right/Bottom: Interactive Simulation Canvas Stage (placeholder simulation sandbox ready for wave, particle, potential well, and transistor toggles)",
+                "Bottom action bar: 'Ask Why / Tanya Mengapa' expandable drawer, 'Take Quiz' CTA, and 'Next Chapter' button"
+            ]
+        },
+        "quiz_modal": {
+            "path": "frontend/src/components/game/QuizRunner.tsx",
+            "elements": [
+                "5-question interactive deck with instant feedback",
+                "Streak bonus calculation and XP award popups",
+                "Explanations in active language"
+            ]
+        },
+        "journal_drawer": {
+            "path": "frontend/src/components/game/LabJournal.tsx",
+            "elements": [
+                "Searchable discovery log with formula cheatsheets and unlocked concept cards"
+            ]
+        }
+    },
+    "motion": {
+        "library": "motion (from 'motion/react')",
+        "page_transitions": "opacity and scale from 0.98 to 1 with 0.2s ease-out",
+        "xp_gain_animation": "spring scale up to 1.15 then settle with golden particle burst",
+        "map_node_hover": "translate-y -2px with box-shadow expansion",
+        "reduced_motion": "Wrap animations with conditional prefers-reduced-motion check or use opacity-only transitions."
+    },
+    "accessibility": {
+        "contrast_check": "All text tokens exceed WCAG AA 4.5:1 ratio against dark background (#0B0F17 / #111827).",
+        "data_test_ids": "All interactive elements (buttons, language toggles, chapter nodes, quiz options, tabs, modal triggers) MUST carry explicit data-testid attributes (e.g. data-testid='lang-toggle-btn', data-testid='chapter-node-1', data-testid='start-adventure-btn').",
+        "keyboard_nav": "Full focus-visible styling with 2px cyan ring (focus-visible:ring-2 focus-visible:ring-[#00F5D4])."
+    },
+    "instructions_to_main_agent": [
+        "1. Verify Zustand store at frontend/src/store/gameStore.ts holding: language ('id'|'en'), currentChapter (1..13), unlockedChapters (number[]), completedChapters (number[]), xp (number), badges (Badge[]), journalEntries (JournalEntry[]), and soundEnabled (boolean). Persist with zustand/middleware persist to localStorage.",
+        "2. Implement responsive mobile-first UI: On mobile screens, ChapterWorkspace stacks lesson vertically above simulation canvas, and bottom HUD stays pinned. Map view scrolls comfortably on touch.",
+        "3. Use KaTeX via 'katex' / 'react-katex' for crisp mathematical formula rendering (E=hf, Schrödinger equation, de Broglie relation, tunneling probability).",
+        "4. Install any lightweight dependencies needed (e.g. katex @types/katex zustand lucide-react canvas-confetti) in frontend.",
+        "5. Ensure dark mode is active by default in index.html class='dark' and Tailwind v4 theme in frontend/src/index.css.",
+        "6. Build rich bilingual dictionaries for Indonesian and English in frontend/src/i18n/ so all 13 chapter titles, concepts, navigation items, quiz prompts, and settings labels translate seamlessly with instant toggle.",
+        "7. Add delightful pixel-art button styles: border-2 border-cyan-400 bg-slate-900 shadow-[3px_3px_0px_#00F5D4] hover:shadow-[1px_1px_0px_#00F5D4] hover:translate-x-[2px] hover:translate-y-[2px] transition-all."
+    ]
+}
